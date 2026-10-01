@@ -1,0 +1,1286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | PT. Andalas Jaya Perkasa</title>
+
+    <meta
+        name="description"
+        content="Learn about PT. Andalas Jaya Perkasa, an industrial gas company established in 1991 serving industrial and manufacturing needs."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+       /* =========================================
+   GLOBAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    color: #26384a;
+    background: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Manrope", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+        /* =====================================================
+           2. HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 88px;
+            z-index: 1000;
+            background: transparent;
+            border-bottom: none;
+        }
+        
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        header.scrolled .nav-links a {
+            color: #0b3157;
+        }
+        
+        header.scrolled .logo img {
+            /* keep the same logo */
+        }
+        
+        header.scrolled .language-switch {
+            border-color: #d9e1ea;
+        }
+
+        /* AJP LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            display: block;
+        }
+
+
+        /* NAVIGATION */
+        
+        .navbar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #c8202f;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* LANGUAGE SWITCH */
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dce4ec;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .language-switch button {
+            border: none;
+            background: white;
+            color: #50647a;
+            padding: 8px 11px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .language-switch button.active {
+            background: #0b2b50;
+            color: white;
+        }
+        
+                .email-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color:  #9fb0c1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .email-link i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #9fb0c1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .phone-link i {
+            color: white;
+            font-size: 20px;
+        }
+
+
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #0b3157;
+    font-size: 27px;
+    line-height: 1;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   ABOUT HERO
+========================================= */
+
+.about-hero {
+    position: relative;
+    height: 780px;
+    min-height: 780px;
+    margin: 0;
+    padding: 0;
+
+    background-image:
+        linear-gradient(
+            to top,
+            rgba(5, 32, 58, 0.88) 0%,
+            rgba(5, 32, 58, 0.45) 40%,
+            rgba(5, 32, 58, 0.05) 75%
+        ),
+        url("AJP-building1.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-hero-content {
+    position: absolute;
+    left: 5%;
+    bottom: 70px;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.about-hero .eyebrow {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.about-hero p {
+    max-width: 900px;
+    color: #ffffff;
+    font-size: 56px;
+    line-height: 1.1;
+    letter-spacing: -1.5px;
+    margin: 0;
+}
+
+.about-hero p span {
+    color: #ffffff;
+}
+
+
+/* =========================================
+   OUR HISTORY
+========================================= */
+
+.about-history {
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.history-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.history-column {
+    max-width: 560px;
+}
+
+.history-column .eyebrow {
+    margin-bottom: 15px;
+    color: #b51e2b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.history-column p {
+    color: #697b8e;
+    font-size: 16px;
+    line-height: 1.9;
+    margin: 0;
+}
+
+
+/* =========================================
+   SECTION HEADINGS
+========================================= */
+
+.section-heading {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.section-heading .eyebrow {
+    color: #b51e2b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    color: #0b2d52;
+    font-size: 38px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.section-heading p {
+    color: #697b8e;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   OUR JOURNEY
+========================================= */
+
+.journey-section {
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.journey-section .section-heading {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 80px;
+}
+
+.journey-section .section-heading h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.journey-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+}
+
+.journey-timeline::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 16.67%;
+    right: 16.67%;
+    height: 1px;
+    background: #cbd5df;
+}
+
+.journey-item {
+    position: relative;
+    text-align: center;
+    padding: 0 35px;
+}
+
+.journey-dot {
+    width: 15px;
+    height: 15px;
+    background: #0b3157;
+    border-radius: 50%;
+    margin: 0 auto 35px;
+    position: relative;
+    z-index: 2;
+    border: 4px solid #ffffff;
+    box-sizing: content-box;
+}
+
+.journey-stage {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    color: #b3262d;
+    margin-bottom: 12px;
+}
+
+.journey-content h3 {
+    font-size: 24px;
+    color: #102f4d;
+    margin: 0 0 14px;
+}
+
+.journey-year {
+    font-size: 15px;
+    font-weight: 700;
+    color: #b3262d;
+    margin-bottom: 14px;
+}
+
+.journey-content p {
+    max-width: 300px;
+    margin: 0 auto;
+    color: #5d6873;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   INDUSTRIES
+========================================= */
+
+.industries {
+    padding: 105px 0;
+    background: #f4f7fa;
+}
+
+.industries-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 90px;
+    align-items: start;
+}
+
+.industries-layout .eyebrow {
+    color: #b51e2b;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.industries-layout h2 {
+    color: #0b2d52;
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+}
+
+.industries-layout p {
+    color: #697b8e;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.industry-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.industry-item {
+    background: #ffffff;
+    border: 1px solid #e1e8ef;
+    border-radius: 8px;
+    padding: 18px 20px;
+    color: #0b2d52;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.25s ease;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+
+        footer {
+            background: #071f38;
+            padding: 50px 0 22px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 70px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #9fb0c1;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #9fb0c1;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 22px;
+            color: #7f93a7;
+            font-size: 12px;
+        }
+        
+        .footer-grid p {
+            color: #9fb0c1;
+            font-size: 15px;
+            font-style: italic;
+            margin: 0;
+        }
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .nav-right {
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .industries-layout {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* General */
+
+    .container {
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+
+    /* =====================================
+       HEADER
+    ===================================== */
+
+    header {
+        height: 76px;
+    }
+
+    .navbar {
+        height: 76px;
+        flex-direction: row;
+        padding: 0 24px;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 68px;
+    }
+
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-left: auto;
+    }
+
+    /* Hide desktop links */
+    .nav-links {
+        display: none;
+    }
+
+    /* Show hamburger */
+    .mobile-menu-button {
+        display: block;
+    }
+
+    .language-switch button {
+        padding: 7px 9px;
+        font-size: 11px;
+    }
+
+
+    /* =====================================
+       MOBILE MENU OPEN
+    ===================================== */
+
+   .nav-links.mobile-open {
+          display: flex;
+          position: absolute;
+          top: 76px;
+          right: 0;
+          width: 55%;
+          background: #eef1f4;
+          flex-direction: column;
+          align-items: flex-end;
+          text-align: right;
+          gap: 0;
+          padding: 10px 24px 20px;
+          box-sizing: border-box;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      
+
+    .nav-links.mobile-open li {
+        width: 100%;
+    }
+
+    .nav-links.mobile-open a {
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        color: #0b3157 !important;
+        font-size: 16px;
+        border-bottom: 1px solid #e1e6eb;
+    }
+
+    .nav-links.mobile-open a::after {
+        display: none;
+    }
+
+
+    /* =====================================
+       HERO
+    ===================================== */
+
+    .about-hero {
+        height: 570px;
+        min-height: 570px;
+        background-position: 40% 35%;
+        background-size:cover;
+    }
+
+    .about-hero-content {
+        left: 24px;
+        right: 24px;
+        bottom: 45px;
+        max-width: none;
+    }
+
+    .about-hero .eyebrow {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .about-hero p {
+        max-width: 100%;
+        font-size: 38px;
+        line-height: 1.08;
+        letter-spacing: -1px;
+        margin: 0;
+    }
+
+
+    /* =====================================
+       HISTORY
+    ===================================== */
+
+    .about-history {
+        padding: 70px 0;
+    }
+
+    .history-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .history-column {
+        max-width: 100%;
+    }
+
+    .history-column .eyebrow {
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .history-column p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+
+    /* =====================================
+       JOURNEY
+    ===================================== */
+
+    .journey-section {
+        padding: 75px 0;
+    }
+
+    .journey-section .section-heading {
+        margin-bottom: 55px;
+    }
+
+    .journey-section .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .journey-timeline {
+        display: block;
+    }
+
+    .journey-timeline::before {
+        top: 0;
+        bottom: 0;
+        left: 7px;
+        right: auto;
+        width: 1px;
+        height: auto;
+    }
+
+    .journey-item {
+        text-align: left;
+        padding: 0 0 50px 35px;
+    }
+
+    .journey-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .journey-dot {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
+
+    .journey-stage {
+        font-size: 11px;
+    }
+
+    .journey-content h3 {
+        font-size: 23px;
+    }
+
+    .journey-content p {
+        max-width: 100%;
+        font-size: 15px;
+        line-height: 1.7;
+        margin: 0;
+    }
+
+
+    /* =====================================
+       INDUSTRIES
+    ===================================== */
+
+    .industries {
+        padding: 75px 0;
+    }
+
+    .industries-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .industries-layout h2 {
+        font-size: 32px;
+    }
+
+    .industry-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =====================================
+       FOOTER
+    ===================================== */
+
+    footer {
+        padding: 55px 0 25px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+
+            <img
+                src="ajp-logo.png"
+                alt="AJP Group - PT. Andalas Jaya Perkasa"
+            >
+
+        </a>
+
+
+              <div class="nav-right">
+      
+          <nav>
+              <ul class="nav-links">
+      
+                  <li>
+                      <a href="index.html" data-translate="home">
+                          Home
+                      </a>
+                  </li>
+      
+                  <li>
+                      <a href="about.html" class="active" data-translate="aboutUs">
+                          About Us
+                      </a>
+                  </li>
+      
+                  <li>
+                      <a href="products-services.html" data-translate="productsServices">
+                          Products &amp; Services
+                      </a>
+                  </li>
+      
+                  <li>
+                      <a href="contact.html" data-translate="contact">
+                          Contact
+                      </a>
+                  </li>
+      
+              </ul>
+          </nav>
+      
+          <div class="language-switch">
+              <button class="active" data-lang="en">EN</button>
+              <button data-lang="id">ID</button>
+          </div>
+      
+          <button
+              class="mobile-menu-button"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+          >
+              ☰
+          </button>
+      
+      </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<main>
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="about-hero-content">
+
+            <div class="eyebrow">
+              
+            </div>
+            <p data-translate="aboutustitle">
+                <span>Built on experience.</span><br>
+                Evolving with the needs we serve since 1991.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMPANY INTRODUCTION
+===================================================== -->
+
+<section class="about-history">
+
+    <div class="container">
+
+        <div class="history-grid">
+
+            <!-- Left Column -->
+            <div class="history-column">
+
+                 <div class="eyebrow"data-translate="ourhistory">OUR HISTORY</div>
+
+                <p data-translate="history1">
+                    It started with a simple observation. Before AJP,
+                    our founder, Mr. Sugio, was involved in the scrap
+                    steel business around Medan. At the time, accessing
+                    oxygen for cutting steel was a significant challenge,
+                    and he saw an opportunity to provide a solution.
+                </p>
+
+            </div>
+
+
+            <!-- Right Column -->
+            <div class="history-column">
+
+                <p data-translate="history2">
+                    This led to the establishment of PT. Andalas Jaya Perkasa in 1991, initially supplying oxygen to meet the needs of local customers. 
+                    Over the years, AJP continued to grow alongside the customers we serve. 
+                    What began with oxygen expanded into a broader portfolio of argon, nitrogen, and liquefied gases, enabling us to support increasingly diverse applications and operational needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     OUR JOURNEY
+===================================================== -->
+
+<section class="journey-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <div class="eyebrow"data-translate="ourjourney">OUR JOURNEY</div>
+            <h2 data-translate="ourjourney1">Growing through experience and opportunity.</h2>
+        </div>
+
+        <div class="journey-timeline">
+
+            <!-- Early Days -->
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+
+                <div class="journey-content">
+                    <div class="journey-stage"data-translate="earlydays">EARLY DAYS</div>
+                    <h3 data-translate="journey">Starting the Journey</h3>
+                    <div class="journey-year"></div>
+                    <p data-translate="journeyyear">
+                        AJP began its journey in the industrial gas business,
+                        initially focusing on oxygen.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Expansion -->
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+
+                <div class="journey-content">
+                    <div class="journey-stage"data-translate="expansion">EXPANSION</div>
+                    <h3 data-translate="expand">Expanding Our Reach</h3>
+                    <p data-translate="expand1">
+                        As the business grew, AJP expanded its operations
+                        beyond Medan, establishing warehouses and branches
+                        in Aceh, Pekanbaru, Palembang, and Lampung.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Moving Forward -->
+            <div class="journey-item">
+                <div class="journey-dot"></div>
+
+                <div class="journey-content">
+                    <div class="journey-stage"data-translate="movingforward">MOVING FORWARD</div>
+                    <h3 data-translate="growing">Growing With Industry</h3>
+                    <p data-translate="growing1">
+                        Today, AJP continues to grow alongside its customers,
+                        providing gas products, equipment, and supporting
+                        services for a range of applications and operational needs.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+     INDUSTRIES
+===================================================== -->
+
+<section class="industries">
+
+    <div class="container">
+
+        <div class="industries-layout">
+
+
+            <div>
+
+                <div class="eyebrow"data-translate="ourindustries">
+                    Our Sectors
+                </div>
+
+                <h2 data-translate="ourindustries1">
+                    Supporting industrial and medical needs with reliable solutions for continuous operations.
+                </h2>
+
+            </div>
+
+
+            <div class="industry-list">
+
+                <div class="industry-item" data-translate="metal">
+                    Metal Working &amp; Foundry
+                </div>
+
+                <div class="industry-item" data-translate="electronics">
+                    Electronics &amp; Electrical
+                </div>
+
+                <div class="industry-item" data-translate="glass">
+                    Glass &amp; Ceramics
+                </div>
+
+                <div class="industry-item" data-translate="pulp">
+                    Pulp &amp; Paper
+                </div>
+
+                <div class="industry-item" data-translate="oil">
+                    Oil, Gas &amp; Mining
+                </div>
+
+                <div class="industry-item" data-translate="food">
+                    Food &amp; Beverage
+                </div>
+
+                <div class="industry-item" data-translate="rubber">
+                    Rubber &amp; Tyre
+                </div>
+
+                <div class="industry-item" data-translate="engineering">
+                    Engineering &amp; Contractors
+                </div>
+
+                <div class="industry-item">
+                    Aluminium
+                </div>
+
+                <div class="industry-item" data-translate="healthcare">
+                    Healthcare
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    PT. Andalas Jaya Perkasa
+                </h3>
+
+                <p data-translate="footerCompanyDescription">
+                     More than just a gas supplier. 
+                </p>
+                                
+                <a href="mailto:andalasjayaperkasa@yahoo.com" class="email-link">
+                      <i class="fa-solid fa-envelope"></i>
+                      andalasjayaperkasa@yahoo.com
+                  </a>
+                  
+                  <a href="tel:+62 85261690189" class="phone-link">
+                      <i class="fa-solid fa-phone"></i>
+                      +62 85261690189
+                  </a>
+
+
+            </div>
+
+
+
+            <div>
+
+                <h3 data-translate="footerLocation">Location</h3>
+
+                <p>
+                    Sisingamangaraja Km 9,2/218<br>
+                    Medan, Sumatera Utara 20218<br>
+                    Indonesia<br>
+                    Tanjung Morawa B, Tanjung Morawa<br>
+                    Deli Serdang, Sumatera Utara<br>
+                    Indonesia
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3 data-translate="footerQuickLinks">Quick Links</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html" data-translate="home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" data-translate="aboutUs">
+                            About Us
+                        </a>
+                    </li>                   
+
+
+                    <li>
+                        <a href="products-services.html"data-translate="productsServices">
+                            Products &amp; Services
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html" data-translate="contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 PT. Andalas Jaya Perkasa. All rights reserved.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+
+/* =========================
+   HEADER SCROLL
+========================= */
+
+window.addEventListener("scroll", function () {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton = document.querySelector(".mobile-menu-button");
+const navLinks = document.querySelector(".nav-links");
+
+menuButton.addEventListener("click", function () {
+
+    navLinks.classList.toggle("mobile-open");
+
+    const isOpen = navLinks.classList.contains("mobile-open");
+
+    menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.textContent = isOpen ? "✕" : "☰";
+
+});
+
+</script>
+
+<script src="language.js"></script>
+
+</body>
+
+</html>
+
+     

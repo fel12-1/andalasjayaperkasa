@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | PT. Andalas Jaya Perkasa</title>
+
+    <meta 
+        name="description"
+        content="Contact Information for more details."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =====================================================
+           1. BASIC SETTINGS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #102a4c;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: auto;
+        }
+        .solutions {
+            padding: 105px 0;
+            background: #ffffff;
+        }
+
+        /* =====================================================
+           2. HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 88px;
+            z-index: 1000;
+            background: transparent;
+            border-bottom: none;
+        }
+        
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        header.scrolled .nav-links a {
+            color: #0b3157;
+        }
+        
+        header.scrolled .logo img {
+            /* keep the same logo */
+        }
+        
+        header.scrolled .language-switch {
+            border-color: #d9e1ea;
+        }
+
+        /* AJP LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            display: block;
+        }
+
+
+        /* NAVIGATION */
+        
+        .navbar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #c8202f;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* LANGUAGE SWITCH */
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dce4ec;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .language-switch button {
+            border: none;
+            background: white;
+            color: #50647a;
+            padding: 8px 11px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .language-switch button.active {
+            background: #0b2b50;
+            color: white;
+        }
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #0b3157;
+    font-size: 27px;
+    line-height: 1;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+
+          /* =====================================================
+             CONTACT HERO
+          ===================================================== */
+          
+          .contact-hero {
+              height: 150px;
+              background:#465B70;
+              display: flex;
+              align-items: flex-end;
+          }
+          
+          .contact-hero-content {
+              padding-bottom: 55px;
+          }
+          
+          .contact-hero .eyebrow {
+            max-width: 680px;
+            color: #ffffff;
+            font-size: 56px;
+            line-height: 1.1;
+            margin-top: 200px;
+        }
+          
+          .contact-hero h1 {
+              font-family: "Manrope", sans-serif;
+              color: #ffffff;
+              font-size: 52px;
+              line-height: 1.1;
+              letter-spacing: -1.5px;
+              margin: 0;
+          }
+              
+     /* =========================================
+          1. CONTACT
+        ========================================= */
+
+          .contact-section {
+              padding: 110px 0;
+              background: #f5f7f9;
+          }
+          
+          
+          .contact-grid {
+              display: grid;
+              grid-template-columns: 0.9fr 1.1fr;
+              gap: 100px;
+              align-items: start;
+          }
+          
+          
+          /* Left */
+          
+          .contact-intro {
+              max-width: 500px;
+          }
+          
+          .contact-intro .eyebrow {
+              margin-bottom: 18px;
+          }
+          
+          .contact-intro h2 {
+              color: #0b2d52;
+              font-size: 44px;
+              line-height: 1.15;
+              letter-spacing: -1.5px;
+              margin: 0 0 22px;
+          }
+          
+          .contact-intro p {
+              color: #697b8e;
+              font-size: 16px;
+              line-height: 1.8;
+              max-width: 430px;
+          }
+          
+          
+          /* Right */
+          
+          .contact-details {
+              border-top: 1px solid #d4dce4;
+          }
+          
+          
+          .contact-item {
+              padding: 25px 0;
+              border-bottom: 1px solid #d4dce4;
+          }
+          
+          
+          .contact-label {
+              color: #b51e2b;
+              font-size: 11px;
+              font-weight: 800;
+              letter-spacing: 2px;
+              margin-bottom: 8px;
+          }
+          
+          
+          .contact-item a {
+              color: #0b3157;
+              font-size: 17px;
+              font-weight: 600;
+              text-decoration: none;
+          }
+          
+          
+          .contact-item a:hover {
+              color: #b51e2b;
+          }
+          
+          
+          .contact-item p {
+              color: #52677d;
+              font-size: 15px;
+              line-height: 1.8;
+              margin: 0;
+          }
+          
+          /* =====================================================
+           2. OUR LOCATIONS
+        ===================================================== */
+        
+        .location-section {
+            padding: 110px 0;
+            background: #ffffff;
+        }
+        
+        .location-heading {
+            max-width: 760px;
+            margin-bottom: 65px;
+        }
+        
+        .location-heading .eyebrow {
+            margin-bottom: 18px;
+            color: #b51e2b;
+            font-family: "Manrope", sans-serif;
+        }
+        
+        .location-heading h2 {
+            font-family: "Manrope", sans-serif;
+            color: #0b2d52;
+            font-size: 42px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin: 0;
+        }
+        
+        
+        /* Location list */
+        
+        .location-list {
+            border-top: 1px solid #d4dce4;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            align-items: center;
+            column-gap: 50px;
+            row-gap: 20px;
+            padding: 28px 0;
+        }
+        
+        .location-region {
+            color: #b51e2b;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 2.5px;
+            align-items: center;
+            padding: 28px 0;
+            row-gap: 0;
+        }
+  
+        
+        .location-row {
+            padding: 0;
+            margin: 0;
+        }
+        
+        
+        /* =====================================================
+          Mobile
+        ===================================================== */  
+            @media (max-width: 768px) { 
+        .location-section {
+            padding: 80px 0;
+        }
+        
+        .location-heading {
+            margin-bottom: 45px;
+        }
+        
+        .location-heading h2 {
+            font-size: 34px;
+        }
+        
+        .location-row {
+            gap: 8px;
+            padding: 24px 0;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-auto-flow: row;
+            grid-auto-columns: max-content;
+            display: grid;
+            column-gap: 35px;
+            row-gap: 10px;
+        }
+        
+        .location-region {
+            font-size: 11px;
+        }
+        
+        .contact-grid {
+            grid-template-columns: 1fr;
+            gap: 50px;
+        }
+        
+        .contact-intro {
+            max-width: 100%;
+        }
+        
+        .contact-intro h2 {
+            font-size: 34px;
+        }
+        
+        .contact-intro p {
+            max-width: 100%;
+        }
+        
+        .contact-details {
+            width: 100%;
+        }
+        
+        .contact-item a {
+            overflow-wrap: anywhere;
+        }
+        
+            }
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            background: #071f38;
+            padding: 50px 0 22px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 70px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #9fb0c1;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #9fb0c1;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 22px;
+            color: #7f93a7;
+            font-size: 12px;
+        }
+        
+        .footer-grid p {
+            color: #9fb0c1;
+            font-size: 15px;
+            font-style: italic;
+            margin: 0;
+        }
+        
+                .email-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color:  #9fb0c1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .email-link i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #9fb0c1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .phone-link i {
+            color: white;
+            font-size: 20px;
+        }
+
+
+
+
+
+        /* =====================================================
+           9. MOBILE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-right {
+                gap: 10px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                min-height: auto;
+            }
+
+            .hero-text {
+                width: 100%;
+                padding: 80px 0 150px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            /* Show hamburger */
+            .mobile-menu-button {
+              display: block;
+              border: none;
+              background: transparent;
+              color: #0b3157;
+              font-size: 27px;
+              line-height: 1;
+              padding: 5px;
+              cursor: pointer;
+          }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-right {
+                gap: 10px;
+            }
+            
+            .nav-links.mobile-open {
+          display: flex;
+          position: absolute;
+          top: 76px;
+          right: 0;
+          width: 55%;
+          background: #eef1f4;
+          flex-direction: column;
+          align-items: flex-end;
+          text-align: right;
+          gap: 0;
+          padding: 10px 24px 20px;
+          box-sizing: border-box;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      
+      
+        .nav-links.mobile-open li {
+            width: 100%;
+        }
+        
+        .nav-links.mobile-open a {
+            display: block;
+            width: 100%;
+            padding: 15px 0;
+            color: #0b3157 !important;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 1px solid #e1e6eb;
+        }
+        
+        .nav-links.mobile-open a::after {
+            display: none;
+        }
+                }
+        
+        /* LANGUAGE SWITCH */
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dce4ec;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .language-switch button {
+            border: none;
+            background: white;
+            color: #50647a;
+            padding: 8px 11px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .language-switch button.active {
+            background: #0b2b50;
+            color: white;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            <img 
+                src="ajp-logo.png" 
+                alt="AJP Group - PT. Andalas Jaya Perkasa"
+            >
+        </a>
+
+
+        <div class="nav-right">
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html" data-translate="home">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="about.html" data-translate="aboutUs">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products-services.html" data-translate="productsServices">
+                            Products & Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html" data-translate="contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <div class="language-switch">
+
+                <button class="active" data-lang="en">
+                    EN
+                </button>
+
+                <button data-lang="id">
+                    ID
+                </button>
+                
+                 </div>
+            <button class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false">
+    ☰
+</button>
+
+        </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     PAGE HERO
+===================================================== -->
+
+<main>
+
+<section class="contact-hero">
+
+    <div class="container">
+
+        <div class="contact-hero-content">
+            
+            <div class="eyebrow">
+              
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+            <!-- Left: Introduction -->
+            <div class="contact-intro">
+
+                <h2 data-translate="contactTitle">
+                    Get in touch with AJP
+                </h2>
+
+                <p data-translate="contactDescription">
+                    For more information about our products and services,
+                    please contact us.
+                </p>
+
+            </div>
+
+
+            <!-- Right: Contact Details -->
+            <div class="contact-details">
+
+                <div class="contact-item">
+
+                    <div class="contact-label" data-translate="phone">
+                        PHONE (WHATSAPP)
+                    </div>
+
+                    <a href="tel:+6285261690189">
+                        +6285261690189
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+                    <div class="contact-label"data-translate="email">
+                        EMAIL
+                    </div>
+
+                    <a href="mailto:andalasjayaperkasa@yahoo.com">
+                        andalasjayaperkasa@yahoo.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-label"data-translate="headOffice">
+                        CORPORATE OFFICE
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/Rvzystd7KoVG9LfS7" target="_blank">
+                        Sisingamangaraja Km 9,2 No. 218<br>
+                        Medan, Sumatera Utara 20218<br>
+                        Indonesia
+                    </a>
+
+                </div>
+                
+                 <div class="contact-item">
+
+                    <div class="contact-label"data-translate="manufacturing">
+                        MANUFACTURING FACILITY
+                    </div>
+
+                    <a href="https://maps.app.goo.gl/5N4trHcstxd3C8hB7" target="_blank">
+                        Tanjung Morawa B, Tanjung Morawa<br>
+                        Deli Serdang, Sumatera Utara 
+                    </a>
+
+                </div>
+                
+                <div class="contact-item">
+
+                    <div class="contact-label"data-translate="businessHours">
+                        BUSINESS HOURS
+                    </div>
+
+                    <a>
+                        <span data-translate="mondaySaturday">
+                            Monday - Saturday
+                        </span>
+                        <br>
+                        <span data-translate="hours">
+                            08:00 - 17:00
+                        </span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+  Our Locations
+===================================================== -->
+<section class="location-section">
+
+    <div class="container">
+
+        <div class="location-heading">
+
+            <div class="eyebrow"data-translate="ourLocations">
+                OUR LOCATIONS
+            </div>
+
+            <h2 data-translate="locationsDescription">
+                Supporting customers across different areas.
+            </h2>
+
+        </div>
+
+
+        <div class="location-list">
+
+            <div class="location-row">
+                <div class="location-region">
+                    ACEH
+                </div>
+            </div>
+
+
+            <div class="location-row">
+                <div class="location-region" data-translate="northsumatera">
+                    NORTH SUMATRA
+                </div>
+            </div>
+
+
+            <div class="location-row">
+                <div class="location-region">
+                    RIAU
+                </div>
+            </div>
+
+
+            <div class="location-row">
+                <div class="location-region">
+                    PALEMBANG
+                </div>
+            </div>
+
+
+            <div class="location-row">
+                <div class="location-region">
+                    LAMPUNG
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    PT. Andalas Jaya Perkasa
+                </h3>
+
+                <p data-translate="footerCompanyDescription">
+                    More than just a gas supplier. 
+                </p>
+                
+                                
+                <a href="mailto:andalasjayaperkasa@yahoo.com" class="email-link">
+    <i class="fa-solid fa-envelope"></i>
+    andalasjayaperkasa@yahoo.com
+</a>
+
+<a href="tel:+62 85261690189" class="phone-link">
+    <i class="fa-solid fa-phone"></i>
+    +62 85261690189
+</a>
+
+
+            </div>
+
+
+
+            <div>
+
+                <h3 data-translate="footerLocation">Location</h3>
+
+                <p>
+                    Sisingamangaraja Km 9,2/218<br>
+                    Medan, Sumatera Utara 20218<br>
+                    Indonesia<br>
+                    Tanjung Morawa B, Tanjung Morawa<br>
+                    Deli Serdang, Sumatera Utara<br>
+                    Indonesia
+                    
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3 data-translate="footerQuickLinks">Quick Links</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html" data-translate="home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" data-translate="aboutUs">
+                            About Us
+                        </a>
+                    </li>                   
+
+
+                    <li>
+                        <a href="products-services.html"data-translate="productsServices">
+                            Products &amp; Services
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html" data-translate="contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 PT. Andalas Jaya Perkasa. All rights reserved.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+
+
+<script src="language.js"></script>
+
+<script>
+
+/* =========================
+   HEADER SCROLL
+========================= */
+
+window.addEventListener("scroll", function () {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton = document.querySelector(".mobile-menu-button");
+const navLinks = document.querySelector(".nav-links");
+
+menuButton.addEventListener("click", function () {
+
+    navLinks.classList.toggle("mobile-open");
+
+    const isOpen = navLinks.classList.contains("mobile-open");
+
+    menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.textContent = isOpen ? "✕" : "☰";
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,2083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products & Services | PT. Andalas Jaya Perkasa</title>
+
+    <meta 
+        name="description"
+        content="Learn about our products and services more in depth."
+    >
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link 
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        /* =====================================================
+           1. BASIC SETTINGS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            color: #102a4c;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: auto;
+        }
+        .solutions {
+            padding: 105px 0;
+            background: #ffffff;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            align-items: center;
+        }
+
+        .solutions-heading h2 {
+            font-family: "Manrope", sans-serif;
+
+            color: #0b2d52;
+
+            font-size: 40px;
+
+            line-height: 1.15;
+
+            letter-spacing: -1.5px;
+
+            margin-bottom: 18px;
+        }
+
+        .solutions-heading p {
+            max-width: 520px;
+
+            color: #697b8e;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+        }
+
+        .solutions-list {
+            border-top: 1px solid #dce4ec;
+        }
+
+        .solution-item {
+            display: flex;
+            align-items: center;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid #dce4ec;
+        }
+
+        .solution-item span {
+            width: 55px;
+
+            color: #c8202f;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .solution-item strong {
+            color: #15395e;
+
+            font-family: "Manrope", sans-serif;
+
+            font-size: 18px;
+        }
+        
+        .solutions-link:hover {
+            color: #b51e2b;
+        }
+        
+
+        /* =====================================================
+           2. HEADER
+        ===================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 88px;
+            z-index: 1000;
+            background: transparent;
+            border-bottom: none;
+        }
+        
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.97);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        }
+        
+        header.scrolled .nav-links a {
+            color: #0b3157;
+        }
+        
+        header.scrolled .logo img {
+            /* keep the same logo */
+        }
+        
+        header.scrolled .language-switch {
+            border-color: #d9e1ea;
+        }
+
+        /* AJP LOGO */
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 105px;
+            width: auto;
+            display: block;
+        }
+
+
+        /* NAVIGATION */
+        
+        .navbar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+            margin-left: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #ffffff;
+            position: relative;
+            padding: 8px 0;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #c8202f;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .nav-links a:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* LANGUAGE SWITCH */
+
+        .language-switch {
+            display: flex;
+            align-items: center;
+            border: 1px solid #dce4ec;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .language-switch button {
+            border: none;
+            background: white;
+            color: #50647a;
+            padding: 8px 11px;
+            font-size: 12px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .language-switch button.active {
+            background: #0b2b50;
+            color: white;
+        }
+
+/* =========================================
+   MOBILE MENU BUTTON
+========================================= */
+
+.mobile-menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #0b3157;
+    font-size: 27px;
+    line-height: 1;
+    padding: 5px;
+    cursor: pointer;
+}
+
+
+        /* =====================================================
+           3. HERO
+        ===================================================== */
+
+        .products-hero {
+            position: relative;
+            height: 680px;
+            min-height: 680px;
+        
+            background-image: url("AJP-product.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        
+            display: flex;
+            align-items: flex-end;
+        
+            color: #ffffff;
+            overflow: hidden;
+        }
+        
+        
+        /* Dark overlay */
+        
+                .products-hero-overlay {
+            position: absolute;
+            inset: 0;
+        
+            background: linear-gradient(
+                90deg,
+                rgba(4, 27, 52, 0.88) 0%,
+                rgba(4, 27, 52, 0.65) 35%,
+                rgba(4, 27, 52, 0.25) 65%,
+                rgba(4, 27, 52, 0.05) 100%
+            );
+        }
+        
+        
+        /* Hero content */
+        
+        .products-hero-content {
+            position: relative;
+            z-index: 2;
+        
+            padding-bottom: 90px;
+        
+            max-width: 700px;
+        }
+        
+        
+        .products-hero-content .eyebrow {
+            color: #ffffff;
+            margin-bottom: 18px;
+        }
+        
+        
+        .products-hero-content h1 {
+            font-family: "Manrope", sans-serif;
+        
+            color: #ffffff;
+        
+            font-size: clamp(48px, 5vw, 64px);
+            line-height: 1.05;
+        
+            letter-spacing: -2px;
+        
+            margin-bottom: 20px;
+        }
+        
+        
+        .products-hero-content p {
+            color: rgba(255, 255, 255, 0.9);
+        
+            font-size: 18px;
+            line-height: 1.7;
+        
+            max-width: 580px;
+        
+            margin-top: 400px;
+        }
+        
+        .products-hero-content p span{
+            max-width: 680px;
+            color: #ffffff;
+            font-size: 56px;
+            line-height: 1.1;
+        }
+        
+        /* Content */
+        
+        .visual-content {
+            position: relative;
+            z-index: 2;
+        
+            text-align: center;
+        
+            color: white;
+        }
+        
+
+        /* AJP GROUP */
+        
+        .visual-label {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 3px;
+        
+            color: #d5e0eb;
+        
+            margin-bottom: 25px;
+        }
+
+
+        /* INDUSTRIAL GAS */
+        
+        .visual-title {
+            font-family: "Manrope", sans-serif;
+        
+            font-size: 42px;
+            line-height: 1.05;
+        
+            font-weight: 800;
+        
+            letter-spacing: -1px;
+        
+            margin-bottom: 35px;
+        }
+
+
+        /* Gas labels */
+        
+        .visual-gases {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .visual-gases span {
+            min-width: 50px;
+        
+            padding: 9px 12px;
+        
+            background: rgba(255,255,255,0.09);
+        
+            border: 1px solid rgba(255,255,255,0.18);
+        
+            border-radius: 5px;
+        
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+
+        /* SMALL HEADING */
+
+        .eyebrow {
+            color: #b51e2b;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+        }
+
+
+        /* MAIN TITLE */
+
+
+
+
+        /* DESCRIPTION */
+
+        .hero-description {
+            font-size: 17px;
+            color: #52677d;
+            max-width: 600px;
+            line-height: 1.8;
+            margin-bottom: 34px;
+        }
+
+
+        /* BUTTONS */
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 23px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .button-primary {
+            background: #0b2f57;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #174774;
+            transform: translateY(-2px);
+        }
+
+        /* =====================================================
+           1. Our operations
+        ===================================================== */
+        
+            .operations-section {
+                padding: 120px 0;
+                background: #ffffff;
+            }
+            
+            .operations-heading {
+                max-width: 780px;
+                margin-bottom: 60px;
+            }
+            
+            .operations-heading .eyebrow {
+                margin-bottom: 18px;
+            }
+            
+            .operations-heading h2 {
+                color: #0b2d52;
+                font-size: 44px;
+                line-height: 1.15;
+                letter-spacing: -1.5px;
+                margin: 0 0 22px;
+            }
+            
+            .operations-heading p {
+                color: #697b8e;
+                font-size: 16px;
+                line-height: 1.85;
+                max-width: 680px;
+                margin: 0;
+            }
+            
+            .operations-collage {
+                width: 100%;
+                overflow: hidden;
+            }
+            
+            .operations-collage img {
+                width: 100%;
+                display: block;
+                height: auto;
+            }
+                  
+       /* =====================================================
+           MOBILE
+        ===================================================== */  
+        
+        @media (max-width: 768px) {
+            .operations-collage {
+                width: 110%;
+                margin-left: -5%;
+            }
+            
+            .operations-collage img{
+                width: 100%;
+                height: auto;
+            }
+            
+            .operations-section {
+                padding: 80px 0;
+            }
+        
+            .operations-heading {
+                margin-bottom: 40px;
+            }
+        
+            .operations-heading h2 {
+                font-size: 34px;
+            }
+        
+            .operations-heading p {
+                font-size: 15px;
+                line-height: 1.8;
+            }
+        }   
+/* =====================================================
+   PRODUCTS GRID
+===================================================== */
+
+.products-section {
+    padding: 110px 0;
+    background: #ffffff;
+}
+
+.products-section h2 {
+            color: #0b2d52;
+            font-size: 44px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+
+/* Section Heading */
+
+.products-heading {
+    max-width: 700px;
+    margin-bottom: 65px;
+}
+
+.products-heading .eyebrow {
+    margin-bottom: 18px;
+}
+
+.products-heading h2 {
+    color: #0b2d52;
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 20px;
+}
+
+.products-heading p {
+    color: #697b8e;
+    font-size: 30px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+
+/* Product Grid */
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 70px 25px;
+}
+
+
+/* Product Card */
+
+.product-card {
+    position: relative;
+    height: 320px;
+    min-height: 320px;
+    display: grid;
+    background: #f5f7f9;
+    border-radius: 26px;
+    gap: 14px 28px;
+    padding: 42px 320px 42px 45px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    overflow: visible;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid;
+}
+.product-card-image {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+
+    width: 350px;
+    height: 310px;
+
+    border-radius: 30px;
+    overflow: hidden;
+    z-index: 3;
+}
+.product-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    object-position: 50% 100%;
+}
+
+/* Product Text */
+
+.product-card-content {
+    position: relative;
+    z-index: 2;
+  
+}
+
+.product-card-content h3 {
+    color: #0b2d52;
+    font-size: 27px;
+    line-height: 1.25;
+    margin: 0 0 16px;
+}
+
+.product-card-content p {
+    color: #697b8e;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+    overflow-wrap: break-word;
+}
+.product-card-content span {
+    display: flex;
+    align-items: flex-start;
+    min-width: 0;
+
+    color: #0b3157;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+.product-card-content span::before {
+    content: "•";
+    color: #b51e2b;
+    font-size: 18px;
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+.product-names.two-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-flow: row;
+    grid-auto-columns: max-content;
+    column-gap: 35px;
+    row-gap: 10px;
+}
+
+
+/* =====================================================
+   MOBILE PRODUCTS ACCORDION
+===================================================== */
+
+/* Hidden on desktop */
+.mobile-products-accordion {
+    display: none;
+}
+
+
+/* MOBILE VERSION */
+@media (max-width: 768px) {
+  
+  .products-grid {
+        display: none;
+    }
+
+    .products-heading h2 {
+        font-size: 34px;
+    }
+
+    .mobile-products-accordion {
+        display: block;
+        width: 100%;
+        margin-top: 35px;
+        box-sizing: border-box;
+    }
+
+    .mobile-product-item {
+        width: 100%;
+        border-top: 1px solid #d4dce4;
+        box-sizing: border-box;
+    }
+
+
+
+
+    /* Accordion Header */
+
+    .mobile-product-header {
+        display: grid;
+        grid-template-columns: 35px 1fr 25px;
+        align-items: center;
+        gap: 12px;
+
+        width: 100%;
+        padding: 22px 0;
+
+        border: none;
+        background: transparent;
+
+        color: #0b2d52;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .mobile-product-number {
+        color: #b51e2b;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .mobile-product-title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .mobile-product-icon {
+        color: #b51e2b;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: right;
+    }
+
+
+/* =====================================================
+   MOBILE PRODUCT ACCORDION
+===================================================== */
+
+.mobile-products-accordion {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .products-grid {
+        display: none;
+    }
+
+    .products-heading h2 {
+        font-size: 34px;
+    }
+
+    .mobile-products-accordion {
+        display: block;
+        width: 100%;
+        margin-top: 35px;
+        box-sizing: border-box;
+    }
+
+    .mobile-product-item {
+        width: 100%;
+        border-top: 1px solid #d4dce4;
+        box-sizing: border-box;
+    }
+
+
+    /* Accordion Header */
+
+    .mobile-product-header {
+        display: grid;
+        grid-template-columns: 35px 1fr 25px;
+        align-items: center;
+        gap: 12px;
+
+        width: 100%;
+        padding: 22px 0;
+
+        border: none;
+        background: transparent;
+
+        color: #0b2d52;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .mobile-product-number {
+        color: #b51e2b;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+
+    .mobile-product-title {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.4;
+    }
+
+    .mobile-product-icon {
+        color: #b51e2b;
+        font-size: 24px;
+        font-weight: 400;
+        text-align: right;
+    }
+
+
+    /* Outer Content: Hidden by Default */
+
+    .mobile-product-item > .mobile-product-content {
+        display: none;
+        width: 100%;
+        padding: 0 0 22px;
+        box-sizing: border-box;
+    }
+
+
+    /* Outer Content: Visible When Open */
+
+    .mobile-product-item.open > .mobile-product-content {
+        display: block;
+    }
+
+
+    /* Product Image */
+
+    .mobile-product-image {
+        width: 100%;
+        height: 190px;
+        margin-bottom: 20px;
+        border-radius: 18px;
+        overflow: hidden;
+        background: #e8edf2;
+    }
+
+    .mobile-product-image img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.5s ease;
+    }
+
+    .mobile-product-item.open
+    .mobile-product-image img {
+        transform: scale(1.03);
+    }
+
+
+    /* Inner Product List */
+
+    .mobile-product-item
+    > .mobile-product-content
+    > .mobile-product-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+    /* Two Columns for 5+ Products */
+
+    .mobile-product-item.open
+    > .mobile-product-content
+    > .mobile-product-content:has(span:nth-child(5)) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+    }
+
+
+    /* Product Names */
+
+    .mobile-product-item
+    > .mobile-product-content
+    > .mobile-product-content span {
+        display: flex;
+        align-items: flex-start;
+        min-width: 0;
+
+        padding: 10px 0;
+
+        color: #0b3157;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.5;
+
+        overflow-wrap: anywhere;
+    }
+
+    .mobile-product-item
+    > .mobile-product-content
+    > .mobile-product-content span::before {
+        content: "•";
+        color: #b51e2b;
+        font-size: 18px;
+        margin-right: 10px;
+        flex-shrink: 0;
+    }
+
+
+    /* Prevent Horizontal Overflow */
+
+    .mobile-products-accordion,
+    .mobile-product-item,
+    .mobile-product-header,
+    .mobile-product-content {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+}
+
+}
+        /* =====================================================
+           3. OUR SERVICES
+        ===================================================== */
+
+        .services-section {
+            padding: 110px 0;
+            background: #f5f7f9;
+        }
+        
+        
+        /* Heading */
+        
+        .services-heading {
+            max-width: 780px;
+            margin-bottom: 70px;
+        }
+        
+        .services-heading .eyebrow {
+            margin-bottom: 18px;
+        }
+        
+        .services-heading h2 {
+            color: #0b2d52;
+            font-size: 44px;
+            line-height: 1.15;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+        }
+        
+        .services-heading p {
+            color: #697b8e;
+            font-size: 16px;
+            line-height: 1.8;
+            max-width: 650px;
+        }
+        
+        
+        /* Service list */
+        
+        .services-list {
+            border-top: 1px solid #d4dce4;
+        }
+        
+        
+        /* Individual service */
+        
+        .service-item {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 50px;
+            padding: 45px 0;
+            border-bottom: 1px solid #d4dce4;
+        }
+        
+        
+        /* Number */
+        
+        .service-number {
+            color: #b51e2b;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+        
+        
+        /* Content */
+        
+        .service-content {
+            max-width: 700px;
+        }
+        
+        .service-content h3 {
+            color: #0b2d52;
+            font-size: 28px;
+            margin: 0 0 12px;
+        }
+        
+        .service-content p {
+            color: #697b8e;
+            font-size: 15px;
+            line-height: 1.8;
+            margin: 0;
+            max-width: 620px;
+        }
+              
+        /* =====================================================
+           MOBILE
+        ===================================================== */ 
+        
+        @media (max-width: 768px) {
+
+            .services-section {
+                padding: 80px 0;
+            }
+        
+            .services-heading h2 {
+                font-size: 34px;
+            }
+        
+            .services-heading {
+                margin-bottom: 50px;
+            }
+        
+            .service-item {
+                grid-template-columns: 60px 1fr;
+                gap: 20px;
+                padding: 35px 0;
+            }
+        
+            .service-content h3 {
+                font-size: 23px;
+            }
+        
+        }
+        
+       /* =========================================
+         EQUIPMENT LIST
+      ========================================= */
+      
+              
+        .equipment-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 25px;
+        }
+        
+        .equipment-list span {
+            color: #0b3157;
+            font-size: 15px;
+            font-weight: 600;
+        }
+        
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        
+        footer {
+            background: #071f38;
+            padding: 50px 0 22px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 70px;
+            padding-bottom: 40px;
+        }
+
+        footer h3 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            color: #9fb0c1;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #9fb0c1;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 22px;
+            color: #7f93a7;
+            font-size: 12px;
+        }
+        
+        .footer-grid p {
+            color: #9fb0c1;
+            font-size: 15px;
+            font-style: italic;
+            margin: 0;
+        }
+        
+        .email-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color:  #9fb0c1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .email-link i {
+            color: white;
+            font-size: 20px;
+        }
+        
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #9fb0c1;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        
+        .phone-link i {
+            color: white;
+            font-size: 20px;
+        }
+
+
+        /* =====================================================
+           9. MOBILE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+            /* Show hamburger */
+            .mobile-menu-button {
+              display: block;
+              border: none;
+              background: transparent;
+              color: #0b3157;
+              font-size: 27px;
+              line-height: 1;
+              padding: 5px;
+              cursor: pointer;
+          }
+
+            .nav-links {
+                display: none;
+            }
+
+            .nav-right {
+                gap: 10px;
+            }
+
+            .products-hero {
+                min-height: auto;
+                height: 600px;
+                min-height: 600px;
+                background-position: 20% 35%;
+                background-size:cover;
+            }
+
+            .products-hero-content p span {
+                font-size: 40px;
+                line-height: 1.08;
+            }
+
+            .hero-text {
+                width: 100%;
+                padding: 80px 0 150px;
+            }
+
+            .trust-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            .nav-links.mobile-open {
+          display: flex;
+          position: absolute;
+          top: 76px;
+          right: 0;
+          width: 55%;
+          background: #eef1f4;
+          flex-direction: column;
+          align-items: flex-end;
+          text-align: right;
+          gap: 0;
+          padding: 10px 24px 20px;
+          box-sizing: border-box;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      }
+      
+      .nav-links.mobile-open li {
+          width: 100%;
+      }
+      
+      .nav-links.mobile-open a {
+          display: block;
+          width: 100%;
+          padding: 15px 0;
+          color: #0b3157 !important;
+          font-size: 16px;
+          font-weight: 600;
+          border-bottom: 1px solid #dfe5ea;
+      }
+      
+      .nav-links.mobile-open a::after {
+          content: "";
+          display: block;
+          width: 50%;
+          height: 1px;
+          background: #dfe5ea;
+          margin-top: 15px;
+      }
+        }
+        
+              
+        header.scrolled .language-switch {
+            border-color: #d5dce3;
+        }
+        
+        header.scrolled .language-switch button{
+            border-color: #0b3157;
+        }
+        
+        header.scrolled .language-switch button.active{
+            border-color: #0b3157;
+            color: white;
+        }
+        
+        .equipment-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 35px;
+        row-gap: 0;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .equipment-list span {
+        display: flex;
+        align-items: flex-start;
+        padding: 10px 0;
+        color: #0b3157;
+        font-size: 14px;
+        font-weight: 600;
+        min-width: 0;
+    }
+
+    .equipment-list span::before {
+        content: "";
+        width: 5px;
+        height: 5px;
+        flex-shrink: 0;
+        background: #b51e2b;
+        border-radius: 50%;
+        margin-right: 12px;
+        margin-top:7px;
+        
+    }
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .product-card:nth-child(3) {
+        grid-column: auto;
+        width: auto;
+        justify-self: stretch;
+    }
+
+}
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="container navbar">
+
+        <a href="index.html" class="logo">
+            <img 
+                src="ajp-logo.png" 
+                alt="AJP Group - PT. Andalas Jaya Perkasa"
+            >
+        </a>
+
+
+        <div class="nav-right">
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="index.html" data-translate="home">
+                            Home
+                        </a>
+                    </li>
+                    
+                    <li>
+                        <a href="about.html" class="active" data-translate="aboutUs">
+                            About Us
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="products-services.html"data-translate="productsServices">
+                            Products &amp; Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contact.html"data-translate="contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <div class="language-switch">
+
+                <button class="active" data-lang="en">
+                    EN
+                </button>
+
+                <button data-lang="id">
+                    ID
+                </button>
+                
+            </div>
+            <button class="mobile-menu-button" aria-label="Open navigation menu" aria-expanded="false">
+    ☰
+</button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+    PAGE HERO
+===================================================== -->
+<main>
+
+<section class="products-hero">
+  
+    <div class="products-hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="products-hero-content">
+
+            <div class="eyebrow">
+              
+            </div>
+            <p data-translate="productsServices1">
+                <span>Our Products & Services</span><br>
+                Explore our range of gas products, equipment, and services.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     OUR Expertise
+===================================================== -->
+<section class="operations-section">
+    <div class="container">
+
+        <div class="operations-heading">
+            <div class="eyebrow" data-translate="ourOperations">OUR OPERATIONS</div>
+
+            <h2 data-translate="ouroperations1">
+                Supporting industrial and medical needs through reliable gas handling and supply.
+            </h2>
+
+        </div>
+
+        <div class="operations-collage">
+            <img
+                src="ajp-collage3.jpg"
+                alt="AJP industrial gas operations"
+            >
+        </div>
+
+    </div>
+</section>
+
+<!-- =====================================================
+     Our Products
+===================================================== -->
+<section class="products-section">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="products-heading">
+
+            <div class="eyebrow" data-translate="ourProducts">
+                OUR PRODUCTS
+            </div>
+
+            <h2 data-translate="ourproducts1">
+                Supporting industry and medical needs through reliable gas handling and supply.
+            </h2>
+
+        </div>
+
+
+
+        <div class="products-grid">
+
+            <!-- Product 1: Industrial Gases -->
+            <div class="product-card">
+
+                <div class="product-card-content" >
+                    <h3 data-translate="industrialGases">Industrial Gases</h3>
+
+                    <p class="product-names two-column" data-translate="productname1">
+                      <span>Oxygen</span>
+                      <span>Nitrogen</span>
+                      <span>Argon</span>
+                      <span>Hydrogen</span>
+                      <span>Helium</span>
+                      <span>Carbon Dioxide</span>
+                      <span>Nitrous Oxide</span>
+                      <span>Acetylene</span>
+                      <span>Ammonia</span>
+                  </p>
+                                  </div>
+
+                <div class="product-card-image">
+                    <img
+                        src="AJP-who.jpg"
+                        alt="Industrial Gases"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- Product 2: Liquefied Gases -->
+            <div class="product-card">
+
+                <div class="product-card-content">
+                    <h3 data-translate="liquefiedGases">Liquefied Gases</h3>
+
+                    <p class="product-names two-column" data-translate="productname2">
+                <span>Liquid Oxygen</span>
+                <span>Liquid Nitrogen</span>
+                <span>Liquid Argon</span>
+                <span>Liquid Helium</span>
+                <span>Liquid Carbon Dioxide</span>
+                <span>Ethane</span>
+                <span>Ethylene</span> 
+                    </p>
+                </div>
+
+                <div class="product-card-image">
+                    <img
+                        src="liquid2.jpg"
+                        alt="Liquefied Gases"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- Product 3: Medical Gases -->
+            <div class="product-card">
+
+                <div class="product-card-content" >
+                    <h3 data-translate="medicalGas">Medical Gases</h3>
+
+                    <p class="product-names two-column"data-translate="productname3">
+                <span>Oxygen</span>
+                <span>Medical Air</span>
+                <span>Nitrogen</span>
+                <span>Nitrous Oxide</span>
+                <span>Carbon Dioxide</span>
+                    </p>
+                </div>
+
+                <div class="product-card-image">
+                    <img
+                        src="medis2.jpg"
+                        alt="Medical Gases"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- Product 4: Specialty Gases -->
+            <div class="product-card">
+
+                <div class="product-card-content">
+                    <h3 data-translate="specialityGas">Specialty Gases</h3>
+
+                    <p class="product-names two-column" data-translate="productname4">
+                <span>UHP Gases</span>
+                <span>High-Purity Oxygen & CO₂</span>
+                <span>Purified Acetylene</span>
+                <span>Calibration Gas Mixtures</span>
+                <span>Laser Grade Gases</span>
+                <span>Electronic Grade Gases</span>
+                    </p>
+                </div>
+
+                <div class="product-card-image">
+                    <img
+                        src="khusus 1.jpg"
+                        alt="Specialty Gases"
+                    >
+                </div>
+
+            </div>
+
+
+            <!-- Product 5: Other Products -->
+            <div class="product-card">
+
+                <div class="product-card-content">
+                    <h3 data-translate="otherproducts">Other Products</h3>
+
+                    <p class="product-names two-column" data-translate="productname5">
+                <span>LPG </span>
+                <span>Propane</span>
+                <span>Dry Ice</span>
+                <span>Fire Extinguisher</span>  
+                    </p>
+                </div>
+
+                <div class="product-card-image">
+                    <img
+                        src="AJP-plant1.jpeg"
+                        alt="Other Products"
+                    >
+                </div>
+
+            </div>
+
+        </div>
+        
+        <!-- MOBILE PRODUCTS ACCORDION -->
+
+<div class="mobile-products-accordion">
+
+    <!-- Industrial Gases -->
+    <div class="mobile-product-item">
+
+        <button class="mobile-product-header" type="button">
+            <span class="mobile-product-number">01</span>
+            <span class="mobile-product-title" data-translate="industrialGases">Industrial Gases</span>
+            <span class="mobile-product-icon">+</span>
+        </button>
+        
+        <div class="mobile-product-content">
+
+        <!-- Product Image -->
+        <div class="mobile-product-image">
+            <img
+                src="AJP-who.jpg"
+                alt="Industrial gas cylinders"
+            >
+        </div>
+
+
+        <div class="mobile-product-content" data-translate="productname1">
+            <span>Oxygen</span>
+            <span>Nitrogen</span>
+            <span>Argon</span>
+            <span>Hydrogen</span>
+            <span>Helium</span>
+            <span>Carbon Dioxide</span>
+            <span>Nitrous Oxide</span>
+            <span>Acetylene</span>
+            <span>Ammonia</span>
+        </div>
+
+    </div>
+
+
+    <!-- Liquefied Gases -->
+    <div class="mobile-product-item">
+
+        <button class="mobile-product-header" type="button">
+            <span class="mobile-product-number">02</span>
+            <span class="mobile-product-title"data-translate="liquefiedGases">Liquefied Gases</span>
+            <span class="mobile-product-icon">+</span>
+        </button>
+         <div class="mobile-product-content">
+        
+        <div class="mobile-product-image">
+            <img
+              src="liquid2.jpg"
+              alt="Liquefied Gases"
+            >
+        </div>
+
+        <div class="mobile-product-content" data-translate="productname2">
+            <span>Liquid Oxygen</span>
+            <span>Liquid Nitrogen</span>
+            <span>Liquid Argon</span>
+            <span>Liquid Helium</span>
+            <span>Liquid Carbon Dioxide</span>
+            <span>Ethane</span>
+            <span>Ethylene</span>
+        </div>
+
+    </div>
+
+
+    <!-- Medical Gases -->
+    <div class="mobile-product-item">
+
+        <button class="mobile-product-header" type="button">
+            <span class="mobile-product-number">03</span>
+            <span class="mobile-product-title" data-translate="medicalGas">Medical Gases</span>
+            <span class="mobile-product-icon">+</span>
+        </button>
+        
+        <div class="mobile-product-content">
+        <div class="mobile-product-image">
+            <img
+             src="medis2.jpg"
+             alt="Medical Gases"
+            >
+        </div>
+
+        <div class="mobile-product-content" data-translate="productname3">
+            <span>Oxygen</span>
+            <span>Medical Air</span>
+            <span>Nitrogen</span>
+            <span>Nitrous Oxide</span>
+            <span>Carbon Dioxide</span>
+        </div>
+
+    </div>
+
+
+    <!-- Specialty Gases -->
+    <div class="mobile-product-item">
+
+        <button class="mobile-product-header" type="button">
+            <span class="mobile-product-number">04</span>
+            <span class="mobile-product-title" data-translate="specialityGas">Specialty Gases</span>
+            <span class="mobile-product-icon">+</span>
+        </button>
+        <div class="mobile-product-content">
+         
+        <div class="mobile-product-image">
+            <img
+              src="khusus 1.jpg"
+              alt="Specialty Gases"
+            >
+        </div>
+
+        <div class="mobile-product-content" data-translate="productname4">
+            <span>UHP Gases</span>
+            <span>High-Purity Oxygen & CO₂</span>
+            <span>Purified Acetylene</span>
+            <span>Calibration Gas Mixtures</span>
+            <span>Laser Grade Gases</span>
+            <span>Electronic Grade Gases</span>
+        </div>
+
+    </div>
+
+
+    <!-- Other Products -->
+    <div class="mobile-product-item">
+
+        <button class="mobile-product-header" type="button">
+            <span class="mobile-product-number">05</span>
+            <span class="mobile-product-title" data-translate="otherproducts">Other Products</span>
+            <span class="mobile-product-icon">+</span>
+        </button>
+        <div class="mobile-product-content">
+        
+        <div class="mobile-product-image">
+            <img
+              src="AJP-plant1.jpeg"
+              alt="Other Products"
+            >
+        </div>
+
+        <div class="mobile-product-content" data-translate="productname5">
+            <span>LPG</span>
+            <span>Propane</span>
+            <span>Dry Ice</span>
+            <span>Fire Extinguisher</span>
+        </div>
+
+    </div>
+
+</div>
+
+    </div>
+</section>
+
+
+<!-- =====================================================
+     OUR SERVICES & EQUIPMENT
+===================================================== -->
+
+<section class="services-section">
+
+    <div class="container">
+
+        <div class="services-heading">
+
+            <div class="eyebrow" data-translate="OurservicesEQUIPMENT">
+                OUR SERVICES & EQUIPMENT
+            </div>
+
+            <h2 data-translate="OurSE1">
+                Supporting your operations beyond gas supply.
+            </h2>
+
+        </div>
+
+
+        <div class="services-list">
+
+            <!-- Service 01 -->
+            <div class="service-item">
+
+                <div class="service-number">
+                    01
+                </div>
+
+                <div class="service-content">
+
+                    <h3 data-translate="purging">
+                        Purging Service
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 02 -->
+            <div class="service-item">
+
+                <div class="service-number">
+                    02
+                </div>
+
+                <div class="service-content">
+
+                    <h3 data-translate="hospital">
+                        Hospital Installation
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+       <!-- Equipment 03 -->
+            <div class="service-item">
+
+                <div class="service-number">
+                    03
+                </div>
+
+                <div class="service-content">
+
+                    <h3 data-translate="gasEquipment">
+                        Gas Equipment
+                    </h3>
+
+                    <div class="equipment-list" data-translate="equipmentlist">
+
+                        <span>Regulators</span>
+                        <span>Gas Blender</span>
+                        <span>Cylinder Valves</span>
+                        <span>High-Pressure Cylinders</span>
+                        <span>Vacuum Pump</span>
+                        <span>Liquid Level Gauge</span>
+                        <span>Pressure Gauge</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h3>
+                    PT. Andalas Jaya Perkasa
+                </h3>
+
+                <p data-translate="footerCompanyDescription">
+                  More than just a gas supplier. 
+                </p>
+                
+                <a href="mailto:andalasjayaperkasa@yahoo.com" class="email-link">
+    <i class="fa-solid fa-envelope"></i>
+    andalasjayaperkasa@yahoo.com
+</a>
+
+<a href="tel:+62 85261690189" class="phone-link">
+    <i class="fa-solid fa-phone"></i>
+    +62 85261690189
+</a>
+
+            </div>
+
+
+
+            <div>
+
+                <h3 data-translate="footerLocation">Location</h3>
+
+                <p>
+                    Sisingamangaraja Km 9,2/218<br>
+                    Medan, Sumatera Utara 20218<br>
+                    Indonesia<br>
+                    Tanjung Morawa B, Tanjung Morawa<br>
+                    Deli Serdang, Sumatera Utara<br>
+                    Indonesia
+                </p>
+
+            </div>
+
+
+
+            <div>
+
+                <h3 data-translate="footerQuickLinks">Quick Links</h4>
+
+                <ul>
+
+                    <li>
+                        <a href="index.html" data-translate="home">
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="about.html" data-translate="aboutUs">
+                            About Us
+                        </a>
+                    </li>                   
+
+
+                    <li>
+                        <a href="products-services.html"data-translate="productsServices">
+                            Products &amp; Services
+                        </a>
+                    </li>
+
+
+                    <li>
+                        <a href="contact.html" data-translate="contact">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 PT. Andalas Jaya Perkasa. All rights reserved.
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+</script>
+
+
+<script>
+const mobileProductHeaders = document.querySelectorAll(".mobile-product-header");
+
+mobileProductHeaders.forEach(function (header) {
+
+    header.addEventListener("click", function () {
+
+        const item = header.parentElement;
+        const icon = header.querySelector(".mobile-product-icon");
+
+        document.querySelectorAll(".mobile-product-item").forEach(function (otherItem) {
+
+            if (otherItem !== item) {
+                otherItem.classList.remove("open");
+                otherItem.querySelector(".mobile-product-icon").textContent = "+";
+            }
+
+        });
+
+        item.classList.toggle("open");
+
+        if (item.classList.contains("open")) {
+            icon.textContent = "−";
+        } else {
+            icon.textContent = "+";
+        }
+
+    });
+
+});
+</script>
+<script src="language.js"></script>
+<script>
+
+/* =========================
+   HEADER SCROLL
+========================= */
+
+window.addEventListener("scroll", function () {
+
+    const header = document.querySelector("header");
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+});
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuButton = document.querySelector(".mobile-menu-button");
+const navLinks = document.querySelector(".nav-links");
+
+menuButton.addEventListener("click", function () {
+
+    navLinks.classList.toggle("mobile-open");
+
+    const isOpen = navLinks.classList.contains("mobile-open");
+
+    menuButton.setAttribute("aria-expanded", isOpen);
+
+    menuButton.textContent = isOpen ? "✕" : "☰";
+
+});
+
+</script>
+
+</body>
+
+</html>
